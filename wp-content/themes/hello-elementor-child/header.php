@@ -48,7 +48,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 <header>
 	<div class="header-main-container">
 		<div class="header-logo-container"> 
-    		<a href="#"> <!-- Mettre lien homepage -->
+    		<a href="http://opcr-p6.local/"> <!-- Mettre lien homepage -->
     		<img src="\wp-content\uploads\2023\05\Logo-768x71.png" alt="logo_Planty">
     		</a>
     </div>

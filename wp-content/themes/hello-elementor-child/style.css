@@ -16,23 +16,12 @@ Template: hello-elementor
   --font-family: 'Syne', sans-serif;   
 }
 
-a {
-    color: #000000;
-}
-
-a:hover {
-    color: inherit;
-}
-
-body:not([class*=elementor-page-]) .site-main {   /* -----Probleme marge: theme parent ?----- */
-    max-width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
 
 body {
     font-family: 'Syne', sans-serif;  /* -----justify-content: center > body+header cassé----- */   
-    
+    max-width: 100% !important;    
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .site-header.dynamic-header.menu-dropdown-tablet {
@@ -48,17 +37,26 @@ body {
 }
 
 
+a {
+    color: #000000;
+}
+
+a:hover {
+    color: inherit;
+}
+
+
 
 /* ------------------------------------------------------- */
 /* -----HEADER---- */
+
 header {	    
 	display: flex;
 	justify-content: center;
 }
 
 .header-main-container {
-    display: flex;       
-    max-width: 1440px;
+    display: flex;     
     width: 100%;
 }
 
@@ -66,8 +64,8 @@ header {
     display: flex;
     flex-direction: row;
     align-items:flex-start;    
-    margin-left: 35px;
-    width: 20%;
+    margin-left: 20px;
+    max-width: 200px;
     align-items: center;   
 }
 
@@ -76,21 +74,40 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 50%;  
+}
+
+.test-menu {
     width: 100%;  
+      
 }
 
 .test-menu .menu {
     display: flex;
     flex-direction: row;    
     list-style: none;
+    align-items: flex-end;
 }
 
 .test-menu .menu .menu-item {
     display: flex;
     box-sizing: content-box;
-    flex-direction: column;
-    padding: 25px;        
+    flex-direction: column;   
+    padding: 25px;    
+    align-items: center;    
 }   
+
+.menu-item-348 {
+    background-color: #DC9F96;
+    padding-left: 5% !important;
+    padding-right: 5% !important;     
+       
+}
+
+
+.menu-item-348 a {
+    color: var(--text-white);
+}
 
 .test-menu .menu .menu-item:active { /*-----!! Ne fonctionne pas !!------*/
     background-color: var(--custom-header-accent);
@@ -102,7 +119,6 @@ header {
     background-color: var(--custom-header-hover);
     color: var(--text-white);
 }
-
 
 
 
@@ -118,309 +134,6 @@ header {
 
 
 /* ------------------------------------------------------- */
-/* -----HOMEPAGE----- */
-.home p {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-}
+/* -----HOMEPAGE---- */
 
 
-/* -----Homepage hero section----- */
-.home-hero-image-container {
-    background-color: var(--background-pink);
-    border-bottom: 8px solid var(--background-border-pink);
-    border-bottom-left-radius: 100px 5% ;
-    border-bottom-right-radius: 100px 5% ;   /*-----!!!! Ne fonctionne pas entierement !!!!------*/
-    
-}
-
-.home-hero-h2-title {
-    background-color: var(--background-pink);
-    color: var(--custom-green);   
-    font-weight: 800;
-    font-size: 38px;
-    line-height: 46px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin: 0px;
-}
-
-
-/*-----!!!! Ne fonctionne pas entierement selon format écran !!!!------*/
-.wp-block-image.home-hero-image-product {      
-    z-index: 9999 !important;  
-    position: relative;
-}
-
-.home-hero-image-leaf-left {        
-    display: flex;       
-    position: absolute; 
-    right: 49.5%;
-    top: 65%;
-    z-index: 1 !important;
-    
-}
-
-.home-hero-image-leaf-right {
-    display: flex;    
-    position: absolute;    
-    left: 49.5%;
-    top: 65%;
-    z-index: 1 !important;      
-}
-/*-----!!!! Ne fonctionne pas entierement selon format écran !!!!------*/
-
-
-
-/* -----Homepage flavor gallery section----- */
-.home-h3-tagline {    
-    color: var(--custom-green);    
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.home-h3-flavor {
-    background-color: var(--background-pink);
-    color: var(--custom-title-pink);
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 0px;
-    padding-top: 50px;
-    box-shadow: inset 0px 1px 2px black;
-}
-
-.home-flavor-details {
-    background-color: var(--background-pink);
-    margin-bottom: 0px;
-    padding-top: 15px;
-    padding-bottom: 50px;
-}
-
-.home-flavor-gallery-container {
-    background-color: var(--background-pink); 
-    margin-bottom: 0px;  
-    padding-bottom: 40px;
-    
-}
-
-.home-flavor-image-left {   
-    width: 393px !important;
-    height: 262px !important;  
-    margin-right: 0px;
-    margin-left: auto;  
-}
-
-.home-flavor-image-right {
-    width: 393px !important;
-    height: 262px !important;
-    margin-left: 0px;
-    margin-right: auto;     
-}
-
-
-.home-flavor-image-text {    /*----- Bloc Stack WP 2 Colonnes x2 ------*/
-    font-family: var(--font-family) !important;
-    font-weight: 800 !important;
-    font-size: 48px !important;
-    line-height: 57.5px !important;  
-    margin-bottom: 0px; 
-}
-
-.wp-block-button__link {    /*----- Aligner texte verticalement ? ------*/
-    width: 200px;
-    height: 55px;
-    font-size: 15px;
-    font-weight: 400px;
-    text-align: center;       
-}
-
-
-.gallery-button .wp-element-button:hover {
-    background-color: var(--custom-header-hover) !important;
-}
-
-.home-flavor-gallery-button-container {
-    background-color: var(--background-pink);
-    padding-top: 7px;
-    padding-bottom: 50px;
-    border-bottom-left-radius: 200px 10% ;
-    border-bottom-right-radius: 200px 10% ;
-}
-
-
-/* -----Homepage testimony section----- */
-.home-testimony-h2-title {
-    color: var(--custom-green);   
-    font-weight: 800;
-    font-size: 38px;
-    line-height: 46px;
-}
-
-.home-testimony-h4-name {
-    color: var(--custom-green);   
-    font-weight: 700 !important;
-    font-size: 30px !important;   
-}
-
-figure.wp-block-media-text__media {
-    width: 126px !important;
-    height: 139px !important;
-}
-
-.alignwide {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-}
-
-.page-footer-img-container {
-    width: 100%;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.page-footer-img-container img {
-    width: 100%;   
-}
-
-/* ------------------------------------------------------- */
-/* -----CONTACT PAGE---- */
-/* -----Impossible de créer des divs comme on veut dans editeur de code (formatage auto WP)---- */
-
-.contact-main-title-container {
-    background-color: var(--background-pink);
-    padding-top: 186px;  
-}
-
-
-.contact-h2-main-title {
-    background-color: var(--background-pink);
-    color: var(--custom-title-pink);
-    font-weight: 800 !important;
-    font-size: 38px !important;
-    line-height: 46px !important;   
-    position: relative;
-    padding-top: 200px;
-    padding-bottom: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-/*-----!!!! Ne fonctionne pas entierement selon format écran !!!!------*/
-.contact-main-title-image {
-    position: static;
-    top: 14%;
-    left: 25%;    
-}
-
-.contact-main-title-details-container {
-    background-color: var(--background-pink);
-    padding-top: 30px;
-    padding-bottom: 100px;     
-    border-bottom-left-radius: 400px 15% ;
-    border-bottom-right-radius: 400px 15% ;
-}
-
-.contact-main-title-details {       
-    max-width: 50%;
-    margin: auto;        
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;       
-}
-
-
-/*-----Equipe Section------*/
-.contact-page-equipe-h3-title {
-    font-size: 30px !important;
-    font-weight: 700 !important;
-    margin-top: 139px;
-}
-
-.contact-page-equipe-table {
-    margin-bottom: 0px;
-    padding-bottom: 80px;
-}
-
-.contact-page-equipe-image {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-bottom: 20px;
-}
-
-.contact-page-equipe-decorative-img {
-    margin-bottom: 0px;    
-}
-
-
-/*-----Contact Form Section------*/
-.contact-form-h3-title {
-    font-size: 30px !important;
-    font-weight: 700 !important;
-    background-color: var(--background-pink);
-    padding-top: 66px;
-    padding-bottom: 50px;
-    margin: 0px;    
-}
-
-.wpcf7-form {
-    margin: auto;
-    background-color: var(--background-pink);
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
-}
-
-.wpcf7-form:active {
-    text-decoration: none;
-    border: 0px solid;
-}
-
-.wpcf7-form p {
-    font-size: 20px;  
-}
-
-.wpcf7-text {
-    border: 0px solid !important;    
-}
-
-.wpcf7-email {
-    border: 0px solid !important;    
-}
-
-.wpcf7-textarea {
-    border: 0px solid !important;    
-}
-
-.wpcf7-spinner {
-    display: flex;
-    flex-direction: row;
-}
-
-.wpcf7-form-control-wrap {   
-}
-/*-----?? Display: none cassé ??------*/
-/*-----?? Se débarrasser des bordures bleues quand champ actif ??------*/
-
-.wpcf7-submit {
-    background-color: var(--custom-button);
-    color: var(--text-white);
-    border: 0px solid;
-    width: 200px;
-    height: 55px;
-}
-
-.wpcf7-submit:hover {
-    background-color:#C02E44;
-}
-/*-----?? Centrage, Bordure ??------*/
-
-.contact-footer-img-container {
-    padding-top: 100px;
-    width: 100%;
-    background-color: var(--background-pink);
-}
-
-.contact-page-form-decorative-img {
-       
-}
