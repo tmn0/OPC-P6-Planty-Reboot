@@ -34,15 +34,7 @@ $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 <a class="skip-link screen-reader-text" href="<?php echo esc_url( $skip_link_url ); ?>"><?php echo esc_html__( 'Skip to content', 'hello-elementor' ); ?></a>
 <?php } ?>
 
-<?php
-if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {
-	if ( did_action( 'elementor/loaded' ) && hello_header_footer_experiment_active() ) {
-		get_template_part( 'template-parts/dynamic-header' );
-	} else {
-		get_template_part( 'template-parts/header' );
-	}
-}
-?>
+
 
 <!doctype html>
 <header>
