@@ -36,7 +36,6 @@ $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 
 
 
-<!doctype html>
 <header>
 	<div class="header-main-container">
 		<div class="header-logo-container"> 

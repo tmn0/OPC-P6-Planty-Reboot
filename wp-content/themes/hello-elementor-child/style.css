@@ -77,7 +77,9 @@ a:hover {
 .header-planty-menu-container {
     display: flex;    
     align-items: flex-end;
+    justify-content: center;
     width: 100%;  
+    margin: auto;
 }
 
 .test-menu {
@@ -190,20 +192,55 @@ a:hover {
 
 /* ------------------------------------------------------- */
 /* -----ORDER / COMMANDE PAGE---- */
-.order_form_container {
-    display: flex;
-    flex-direction: column;    
-}
 
-
-#wpcf7-f382-p375-o1 {
-    margin: auto !important;
-    display: flex !important;  
-    flex-direction: column;   
-}
-
-#wpcf7-f382-p375-o1 p {    
+#form-order-two-column {    
+    width: 100% !important;
     color: #ffffff;
     font-size: 20px !important;
-    font-weight: 400 !important;
+    font-weight: 400 !important;    
 }
+
+.form-order-title {
+    font-size: 30px !important;
+    font-weight: 700 !important;
+}
+
+
+#form-order-two-column #form-order-left {
+    width: 49.5% !important;
+    float: left;   
+    border-right: 1px solid #ffffff;
+}
+
+
+#form-order-two-column #form-order-right {
+    width: 49.5% !important;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+#form-order-two-column .wpcf7-form-control.has-spinner.wpcf7-submit {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    
+    margin-top: 50px;
+    margin-bottom: 50px;   
+}
+
+#form-order-two-column label {
+   width: 80%;    
+    
+    
+}
+
+
+/* -----Design CASSE
+#form-order-two-column p {
+    display: flex;
+    justify-content: center;
+}
+---- */
