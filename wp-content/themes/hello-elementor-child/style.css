@@ -131,12 +131,11 @@ a:hover {
 
 /* ------------------------------------------------------- */
 /* -----CONTACT PAGE---- */
-
 .wpcf7-form p {
     font-size: 20px; 
     font-weight: 400px;    
     padding-top: 15px;
-    padding-bottom: 15px;     
+    padding-bottom: 15px;    
 }
 
 .wpcf7-form.label { /*-----!! Ne fonctionne pas !!------*/
@@ -164,23 +163,27 @@ a:hover {
     margin-top: 15px !important; 
 }
 
-.wpcf7-spinner {
+
+.planty-form-send-button p {
     display: flex;
+    justify-content: center;
     flex-direction: row;
+}
+
+.wpcf7-spinner {
+    display: flex;    
+    flex-wrap: wrap;
 }
 
 .wpcf7-form-control.has-spinner.wpcf7-submit {
     color:#ffffff;
     font-size: 15px !important; 
-    font-weight: 400px !important;
-    margin-left: 25% !important;
-    margin-right: 25% !important;
+    font-weight: 400px !important;    
     border-radius: 7px;
     background-color: #E0B9B4;
     border: 0px solid;
-    min-width: 200px !important;
-    min-height: 50px !important;
-    
+    width: 200px !important;
+    height: 50px !important;     
 }
 
 .wpcf7-form-control.has-spinner.wpcf7-submit:hover {
@@ -188,11 +191,8 @@ a:hover {
 }
 
 
-
-
 /* ------------------------------------------------------- */
 /* -----ORDER / COMMANDE PAGE---- */
-
 #form-order-two-column {    
     width: 100% !important;
     color: #ffffff;
@@ -223,24 +223,123 @@ a:hover {
 
 
 #form-order-two-column .wpcf7-form-control.has-spinner.wpcf7-submit {
-    display: flex;
-    align-items: center;    
-    justify-content: center;
-    
+    display: flex;   
     margin-top: 50px;
     margin-bottom: 50px;   
 }
 
 #form-order-two-column label {
-   width: 80%;    
-    
-    
+   width: 80%;   
 }
 
 
-/* -----Design CASSE
+.planty-form-send-button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;    
+    align-items: flex-end;    
+}
+
+
+.wpcf7-form-control.has-spinner.wpcf7-submit {
+    color:#ffffff;
+    font-size: 15px !important; 
+    font-weight: 400px !important;    
+    border-radius: 7px;
+    background-color: #E0B9B4;
+    border: 0px solid;
+    width: 200px !important;
+    height: 50px !important;
+}
+
+/* -----Design CASSé
 #form-order-two-column p {
     display: flex;
     justify-content: center;
 }
 ---- */
+
+
+
+
+/* ------------------------------------------------------- */
+/* -----RESPONSIVE----- */
+@media only screen and (max-width: 767px) {
+    [class*="planty-contact"] {
+    width: 80%;
+    margin: auto;
+    }
+    
+
+    [class*="home-testimony-box-container"] {
+    
+    }
+
+
+    [class*="header-main-container"] {
+    display: grid;     
+    width: 100%;
+    }
+
+    [class*="header-logo-container"] {
+    size: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    [class*="test-menu"] {
+    scale: 80%;
+    margin-left: auto;
+    margin-right: auto;  
+    }
+    
+    [class*="menu-test-menu a"] {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    }
+    
+    [class*="home-main-title"] {    
+    overflow-wrap: break-word;
+    }
+
+    [class*="contact-main-title"] {
+    overflow-wrap: break-word;
+    }
+    
+
+
+
+
+
+
+    [class*="elementor-widget-container"] {
+    max-width: 300px !important;
+    overflow-wrap: break-word;
+    }
+
+    [class*="elementor-widget-container"] {
+    max-width: 300px !important;
+    overflow-wrap: break-word;
+    }
+
+    [class*="elementor-image-box-content"] {
+    max-width: 300px !important;
+    overflow-wrap: break-word;
+    }
+
+    [class*="elementor-image-box-title"] {
+    max-width: 300px !important;
+    overflow-wrap: break-word;
+    }
+
+    [class*="elementor-image-box-description"] {
+    max-width: 300px !important;
+    overflow-wrap: break-word;
+    }
+} 
+
+    
