@@ -163,7 +163,6 @@ a:hover {
     margin-top: 15px !important; 
 }
 
-
 .planty-form-send-button p {
     display: flex;
     justify-content: center;
@@ -171,11 +170,10 @@ a:hover {
 }
 
 .wpcf7-spinner {
-    display: flex;    
-    flex-wrap: wrap;
+    visibility: collapse !important;
 }
 
-.wpcf7-form-control.has-spinner.wpcf7-submit {
+.wpcf7 input[type=submit] {
     color:#ffffff;
     font-size: 15px !important; 
     font-weight: 400px !important;    
@@ -193,6 +191,30 @@ a:hover {
 
 /* ------------------------------------------------------- */
 /* -----ORDER / COMMANDE PAGE---- */
+
+/* -----Items / Flavor section---- */
+.input-order-quantity-class {
+    width: 60%;
+    border: 0px !important;
+    padding: 0px 0px !important;
+    height: 100%;
+    font-size: 2em !important;
+}
+
+.input-order-quantity-class label {
+    
+}
+
+
+
+
+
+.order-number-submit-button {
+   
+}
+
+
+/* -----Order / Commande form---- */
 #form-order-two-column {    
     width: 100% !important;
     color: #ffffff;
@@ -252,12 +274,7 @@ a:hover {
     height: 50px !important;
 }
 
-/* -----Design CASSé
-#form-order-two-column p {
-    display: flex;
-    justify-content: center;
-}
----- */
+
 
 
 
@@ -271,9 +288,7 @@ a:hover {
     }
     
 
-    [class*="home-testimony-box-container"] {
     
-    }
 
 
     [class*="header-main-container"] {
@@ -311,35 +326,6 @@ a:hover {
     }
     
 
-
-
-
-
-
-    [class*="elementor-widget-container"] {
-    max-width: 300px !important;
-    overflow-wrap: break-word;
-    }
-
-    [class*="elementor-widget-container"] {
-    max-width: 300px !important;
-    overflow-wrap: break-word;
-    }
-
-    [class*="elementor-image-box-content"] {
-    max-width: 300px !important;
-    overflow-wrap: break-word;
-    }
-
-    [class*="elementor-image-box-title"] {
-    max-width: 300px !important;
-    overflow-wrap: break-word;
-    }
-
-    [class*="elementor-image-box-description"] {
-    max-width: 300px !important;
-    overflow-wrap: break-word;
-    }
 } 
 
     

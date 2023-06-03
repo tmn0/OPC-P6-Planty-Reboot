@@ -10,3 +10,11 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 
 
+add_filter( 'wp_nav_menu_items', 'add_extra_item_to_nav_menu',10,2);
+function add_extra_item_to_nav_menu( $items, $args ) {
+    if (is_user_logged_in()) {
+        echo '<li><a href="http://opcr-p6.local/wp-admin/">Admin</a></li>';
+    }
+    
+    return $items;
+}
