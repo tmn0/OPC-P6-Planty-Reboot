@@ -52,8 +52,8 @@ a:hover {
 
 
 /* ------------------------------------------------------- */
-/* -----HEADER---- */
-
+/* -----HEADER----- */
+/* ------------------------------------------------------- */
 .site-main header {
     display: none;
 }
@@ -120,6 +120,7 @@ a:hover {
 
 /* ------------------------------------------------------- */
 /* -----FOOTER----- */
+/* ------------------------------------------------------- */
 .custom_footer_link_container {   
 	display: flex;
 	justify-content: center;
@@ -131,48 +132,49 @@ a:hover {
 
 /* ------------------------------------------------------- */
 /* -----CONTACT PAGE---- */
-.wpcf7-form p {
+/* ------------------------------------------------------- */
+
+#planty-contact p {
     font-size: 20px; 
     font-weight: 400px;    
     padding-top: 15px;
     padding-bottom: 15px;    
 }
 
-.wpcf7-form.label { /*-----!! Ne fonctionne pas !!------*/
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-}
-
-.wpcf7-text {
-    border: 0px solid !important;    
-    min-height: 70px;
+#planty-contact .wpcf7-text {
+    border: 0px solid !important;       
+    height: 70px;
     border-radius: 7px !important;
     margin-top: 15px !important;
 }
 
-.wpcf7-email {
+#planty-contact .wpcf7-email {    
     border: 0px solid !important;    
-    min-height: 70px;
+    height: 70px;
     border-radius: 7px !important;
     margin-top: 15px !important;
+    
 }
 
-.wpcf7-textarea {
+#planty-contact .wpcf7-textarea {   
     border: 0px solid !important; 
     border-radius: 7px !important;     
-    margin-top: 15px !important; 
+    margin-top: 15px !important;         
+    resize: none;     
 }
 
-.planty-form-send-button p {
+#planty-contact-send-button {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: center;    
 }
 
+
+/* -----Note: For all forms---- */
 .wpcf7-spinner {
-    visibility: collapse !important;
+    display: none !important;   
 }
 
+/* -----Note: For all forms---- */
 .wpcf7 input[type=submit] {
     color:#ffffff;
     font-size: 15px !important; 
@@ -181,16 +183,30 @@ a:hover {
     background-color: #E0B9B4;
     border: 0px solid;
     width: 200px !important;
-    height: 50px !important;     
+    height: 55px !important;   
+    padding: 0%;
 }
 
+/* -----Note: For all forms---- */
 .wpcf7-form-control.has-spinner.wpcf7-submit:hover {
     background-color: #C02E44;
 }
 
 
+.wpcf7-form.invalid {
+   
+}
+
+.wpcf7-response-output {
+  
+}
+
+
+
+
 /* ------------------------------------------------------- */
 /* -----ORDER / COMMANDE PAGE---- */
+/* ------------------------------------------------------- */
 
 /* -----Items / Flavor section---- */
 .input-order-quantity-class {
@@ -205,75 +221,64 @@ a:hover {
     
 }
 
-
-
-
-
 .order-number-submit-button {
    
 }
 
-
+/* ------------------------------------------------------- */
 /* -----Order / Commande form---- */
 #form-order-two-column {    
     width: 100% !important;
     color: #ffffff;
     font-size: 20px !important;
-    font-weight: 400 !important;    
+    font-weight: 400 !important;      
+    
 }
+
+
+#form-order-two-column p {
+    font-size: 20px; 
+    font-weight: 400px;    
+    padding-top: 15px;
+    padding-bottom: 15px; 
+}
+
+#form-order-two-column .wpcf7-text {   
+    border: 0px solid !important; 
+    border-radius: 7px !important;     
+    margin-top: 15px !important;    
+    height: 70px; 
+}
+
 
 .form-order-title {
     font-size: 30px !important;
     font-weight: 700 !important;
+    padding-bottom: 25px;
 }
 
-
 #form-order-two-column #form-order-left {
-    width: 49.5% !important;
-    float: left;   
+    width: 49.5% ;
+    float: left !important;   
     border-right: 1px solid #ffffff;
 }
 
-
 #form-order-two-column #form-order-right {
-    width: 49.5% !important;
-    float: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-
-#form-order-two-column .wpcf7-form-control.has-spinner.wpcf7-submit {
-    display: flex;   
-    margin-top: 50px;
-    margin-bottom: 50px;   
+    width: 49.5% ;
+    float: right !important;
+   
 }
 
 #form-order-two-column label {
-   width: 80%;   
+   width: 70%;
 }
 
-
-.planty-form-send-button {
+#form-order-two-column .wpcf7-form-control {
+    margin-top: 50px !important;   /* -----Conflit----- */
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;    
-    align-items: flex-end;    
+    margin-left: auto !important;
+    margin-right: auto !important;  /* -----Conflit----- */
 }
-
-
-.wpcf7-form-control.has-spinner.wpcf7-submit {
-    color:#ffffff;
-    font-size: 15px !important; 
-    font-weight: 400px !important;    
-    border-radius: 7px;
-    background-color: #E0B9B4;
-    border: 0px solid;
-    width: 200px !important;
-    height: 50px !important;
-}
-
 
 
 
@@ -281,16 +286,10 @@ a:hover {
 
 /* ------------------------------------------------------- */
 /* -----RESPONSIVE----- */
+/* ------------------------------------------------------- */
 @media only screen and (max-width: 767px) {
-    [class*="planty-contact"] {
-    width: 80%;
-    margin: auto;
-    }
-    
 
-    
-
-
+    /* -----Header---- */
     [class*="header-main-container"] {
     display: grid;     
     width: 100%;
@@ -314,9 +313,13 @@ a:hover {
     text-align: center;
     display: flex;
     justify-content: center;
-    margin: auto;
+    align-items: center;    /* -----Test---- */
     }
-    
+
+
+
+
+    /* -----Misc.---- */
     [class*="home-main-title"] {    
     overflow-wrap: break-word;
     }
@@ -326,6 +329,48 @@ a:hover {
     }
     
 
-} 
+
+
+    /* -----Forms---- */
+    [id*="planty-contact"] {
+    width: 90%;    
+    margin: auto !important;
+    }
+
 
     
+    [id*="form-order-two-column"] {
+    width: 90% !important;   
+    display: grid; 
+    justify-items: center;
+     /* -----Fonctionne pour le bouton mais pas le reste---- */
+    }    
+    
+    [id*="form-order-left"] {
+    float: none !important;
+    width: 100% !important;
+    border-right: none;
+    margin-bottom: 80px ;   
+    display: grid;    
+    justify-items: center;    
+    justify-content: center;  
+    }
+
+    [id*="form-order-right"] {
+    float: none !important;
+    width: 100% !important;    
+    display: grid;    
+    justify-items: center;
+    justify-content: center; 
+    }
+
+    [class*="form-order-title"] {    
+    text-align: center;
+    }
+
+   [id*="form-order-two-column p"] {
+   width: 100%; 
+   
+   }
+}
+
