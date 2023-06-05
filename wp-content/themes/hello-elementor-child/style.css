@@ -76,46 +76,54 @@ a:hover {
 /* ----- Header menu ----- */
 .header-planty-menu-container {
     display: flex;    
-    align-items: flex-end;
-    justify-content: center;
     width: 100%;  
     margin: auto;
 }
 
-.test-menu {
+.custom-menu {
     width: 100%;  
-    font-weight: 700;          
+    font-weight: 700;   
 }
 
-.test-menu .menu {
+.custom-menu .menu {
     display: flex;
     flex-direction: row;    
     list-style: none;
     justify-content: flex-end;    
 }
 
-.test-menu .menu .menu-item {   
-    padding: 25px;    
-    align-items: center;    
+.custom-menu .menu .menu-item {   
+    padding: 25px;         
 }   
 
-.menu-item-383 {
-    background-color: #DC9F96;
-    padding-left: 5% !important;
-    padding-right: 5% !important;            
+.menu-item-410 {
+    background-color: #DC9F96;                
 }
 
 
-.menu-item-383 a {
-    color: var(--text-white);
+#menu-item-412 {
+    display: flex;
 }
 
+.menu-admin-class {
+    padding-left: 1.5%;
+    padding-right: 1.5%;      
+}
 
-.test-menu .menu .menu-item:hover {
+.menu-admin-class a {  
+    display: flex;
+    align-items: center;
+}
+
+.custom-menu .menu .menu-item:hover {
     background-color: var(--custom-header-hover);
     color: var(--text-white);
 }
 
+#menu-item-412:hover {
+    background-color: var(--custom-header-hover);
+    color: var(--text-white);
+}
 
 
 /* ------------------------------------------------------- */
@@ -183,8 +191,8 @@ a:hover {
     background-color: #E0B9B4;
     border: 0px solid;
     width: 200px !important;
-    height: 55px !important;   
-    padding: 0%;
+    height: 55px !important;     
+    display: flex;   
 }
 
 /* -----Note: For all forms---- */
@@ -211,10 +219,11 @@ a:hover {
 /* -----Items / Flavor section---- */
 .input-order-quantity-class {
     width: 60%;
+    border-radius: 5px;
     border: 0px !important;
     padding: 0px 0px !important;
-    height: 100%;
     font-size: 2em !important;
+    text-align: center;   
 }
 
 .input-order-quantity-class label {
@@ -222,26 +231,40 @@ a:hover {
 }
 
 .order-number-submit-button {
-   
+    height: 100%; 
 }
+
+.order-flavor-buttons-container {
+    height: 80px;
+}
+
+
+
+
+
 
 /* ------------------------------------------------------- */
 /* -----Order / Commande form---- */
-#form-order-two-column {    
-    width: 100% !important;
-    color: #ffffff;
-    font-size: 20px !important;
-    font-weight: 400 !important;      
-    
+.form-order-title {
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    padding-bottom: 50px;
 }
 
+#form-order-two-column {    
+    width: 100%;   /* -----Casse responsive si avec !important---- */
+    color: #ffffff;
+    font-size: 20px !important;
+    font-weight: 400 !important;          
+}
 
 #form-order-two-column p {
     font-size: 20px; 
     font-weight: 400px;    
-    padding-top: 15px;
-    padding-bottom: 15px; 
+    padding-top: 5px;    
+    margin-bottom: 50px;
 }
+
 
 #form-order-two-column .wpcf7-text {   
     border: 0px solid !important; 
@@ -251,35 +274,30 @@ a:hover {
 }
 
 
-.form-order-title {
-    font-size: 30px !important;
-    font-weight: 700 !important;
-    padding-bottom: 25px;
-}
 
 #form-order-two-column #form-order-left {
-    width: 49.5% ;
+    width: 49.5%;
     float: left !important;   
-    border-right: 1px solid #ffffff;
+    display: grid;    
+    justify-content: flex-start;
+    border-right: 1px solid #ffffff;    
+
 }
 
-#form-order-two-column #form-order-right {
-    width: 49.5% ;
-    float: right !important;
-   
+#form-order-two-column #form-order-right {        
+    width: 49.5%;    
+    float: right !important;   
+    display: grid;    
+    justify-content: flex-end; /* ----- ~ réso moyenne cassé----- */
 }
 
-#form-order-two-column label {
-   width: 70%;
-}
 
 #form-order-two-column .wpcf7-form-control {
-    margin-top: 50px !important;   /* -----Conflit----- */
-    display: flex;
+    margin-top: 50px;   /* -----Conflit avec !important----- */
+                                    /* -----Conflit display flex; ----- */
     margin-left: auto !important;
-    margin-right: auto !important;  /* -----Conflit----- */
+    margin-right: auto !important;  /* -----Conflit marges----- */
 }
-
 
 
 
@@ -287,12 +305,48 @@ a:hover {
 /* ------------------------------------------------------- */
 /* -----RESPONSIVE----- */
 /* ------------------------------------------------------- */
-@media only screen and (max-width: 767px) {
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+        /* -----Forms---- */
+    [id*="form-order-two-column"] {
+    width: 95% !important;       
+    display: grid; 
+    justify-items: center;   
+    }  
+
+    [id*="form-order-left"] {    
+    border-right: none !important;
+    margin-bottom: 80px ;   
+    display: grid;    
+    justify-items: center !important;    
+    justify-content: center !important;  
+    }
+
+    [id*="form-order-right"] {      
+    display: grid;    
+    justify-items: center !important;    
+    justify-content: center !important;  
+    }
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
 
     /* -----Header---- */
     [class*="header-main-container"] {
     display: grid;     
     width: 100%;
+    }
+
+    [class*="header-planty-menu-container"] {
+    max-width: 75%;    
     }
 
     [class*="header-logo-container"] {
@@ -301,19 +355,11 @@ a:hover {
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
-    }
+    }  
 
-    [class*="test-menu"] {
-    scale: 80%;
-    margin-left: auto;
-    margin-right: auto;  
-    }
-    
-    [class*="menu-test-menu a"] {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;    /* -----Test---- */
+
+    [class*="custom-menu"] {  
+    scale: 90%;          
     }
 
 
@@ -323,11 +369,11 @@ a:hover {
     [class*="home-main-title"] {    
     overflow-wrap: break-word;
     }
+    
 
     [class*="contact-main-title"] {
     overflow-wrap: break-word;
-    }
-    
+    }    
 
 
 
@@ -342,35 +388,34 @@ a:hover {
     [id*="form-order-two-column"] {
     width: 90% !important;   
     display: grid; 
-    justify-items: center;
-     /* -----Fonctionne pour le bouton mais pas le reste---- */
-    }    
+    justify-items: center;    
+    }  
+
     
     [id*="form-order-left"] {
     float: none !important;
-    width: 100% !important;
-    border-right: none;
+    width: 90% !important;
+    border-right: none !important;
     margin-bottom: 80px ;   
     display: grid;    
-    justify-items: center;    
-    justify-content: center;  
+    justify-items: center !important;    
+    justify-content: center !important;  
     }
+
 
     [id*="form-order-right"] {
     float: none !important;
-    width: 100% !important;    
+    width: 90% !important;    
     display: grid;    
-    justify-items: center;
-    justify-content: center; 
+    justify-items: center !important;
+    justify-content: center !important; 
+    margin: auto !important;    
     }
+
 
     [class*="form-order-title"] {    
     text-align: center;
     }
 
-   [id*="form-order-two-column p"] {
-   width: 100%; 
-   
-   }
-}
 
+}

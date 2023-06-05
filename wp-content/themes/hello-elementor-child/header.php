@@ -48,7 +48,7 @@ $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 		<?php
  		wp_nav_menu([
   			'hello-elementor-child' => 'header-planty',
-			'container_class' => 'test-menu'
+			'container_class' => 'custom-menu'
 		]);
 		?>
 	</div>
