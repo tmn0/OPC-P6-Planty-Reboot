@@ -25,6 +25,7 @@ $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+	<script src="/public/wp-content/themes/hello-elementor-child/jquery/jquery-3.7.0.min.js"></script>
 </head>
 <body <?php body_class(); ?>>
 
@@ -52,7 +53,7 @@ $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 		]);
 		?>
 	</div>
-	</div>
+	</div>	
 </header>
 
 

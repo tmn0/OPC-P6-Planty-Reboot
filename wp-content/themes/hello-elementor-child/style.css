@@ -193,6 +193,7 @@ a:hover {
     width: 200px !important;
     height: 55px !important;     
     display: flex;   
+    
 }
 
 /* -----Note: For all forms---- */
@@ -202,7 +203,7 @@ a:hover {
 
 
 .wpcf7-form.invalid {
-   
+ 
 }
 
 .wpcf7-response-output {
@@ -217,27 +218,83 @@ a:hover {
 /* ------------------------------------------------------- */
 
 /* -----Items / Flavor section---- */
-.input-order-quantity-class {
-    width: 60%;
-    border-radius: 5px;
-    border: 0px !important;
-    padding: 0px 0px !important;
-    font-size: 2em !important;
-    text-align: center;   
+/* ----- Number Input & +/- button ----- */
+.quantity {
+  position: relative;
+  
 }
 
-.input-order-quantity-class label {
-    
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.order-number-submit-button {
-    height: 100%; 
+input[type=number]
+{
+  -moz-appearance: textfield;
 }
 
-.order-flavor-buttons-container {
-    height: 80px;
+.quantity input {
+  width: 70%;
+  height: 70px; 
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;  
+  font-size: 1.5em;
 }
 
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: relative;
+  height: 70px;    
+}
+
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;  
+  width: 50%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5em;
+  fill: #DC9F96;        /* -----Ne fonctionne pas---- */
+  background: #DC9F96;
+  background-color: #DC9F96;
+  
+  
+  
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%; 
+  top: 0;
+  border-bottom: 1px solid #eee;    
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  bottom: -1px;
+  height: 50%;
+}
 
 
 
@@ -245,18 +302,21 @@ a:hover {
 
 /* ------------------------------------------------------- */
 /* -----Order / Commande form---- */
+/* ------------------------------------------------------- */
 .form-order-title {
     font-size: 30px !important;
     font-weight: 700 !important;
     padding-bottom: 50px;
 }
 
+
 #form-order-two-column {    
-    width: 100%;   /* -----Casse responsive si avec !important---- */
+    width: 100%;  
     color: #ffffff;
     font-size: 20px !important;
-    font-weight: 400 !important;          
+    font-weight: 400 !important;      
 }
+
 
 #form-order-two-column p {
     font-size: 20px; 
@@ -280,24 +340,31 @@ a:hover {
     float: left !important;   
     display: grid;    
     justify-content: flex-start;
-    border-right: 1px solid #ffffff;    
-
+    border-right: 1px solid #ffffff;   
+    margin-bottom: 50px;     
 }
+
 
 #form-order-two-column #form-order-right {        
     width: 49.5%;    
     float: right !important;   
     display: grid;    
     justify-content: flex-end; /* ----- ~ réso moyenne cassé----- */
+    margin-bottom: 50px;
+    transform: translate(-16.5%);
 }
 
 
 #form-order-two-column .wpcf7-form-control {
-    margin-top: 50px;   /* -----Conflit avec !important----- */
-                                    /* -----Conflit display flex; ----- */
-    margin-left: auto !important;
+    margin-top: 50px;   /* -----Conflit avec les autres éléments du formulaire----- */                                    
+    margin-left: auto !important;   
     margin-right: auto !important;  /* -----Conflit marges----- */
 }
+
+#form-order-two-column label {
+    width: 125%;
+}
+
 
 
 
@@ -307,7 +374,7 @@ a:hover {
 /* ------------------------------------------------------- */
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-        /* -----Forms---- */
+    /* -----Forms---- */
     [id*="form-order-two-column"] {
     width: 95% !important;       
     display: grid; 
@@ -316,7 +383,7 @@ a:hover {
 
     [id*="form-order-left"] {    
     border-right: none !important;
-    margin-bottom: 80px ;   
+    margin-bottom: 80px;   
     display: grid;    
     justify-items: center !important;    
     justify-content: center !important;  
@@ -326,14 +393,9 @@ a:hover {
     display: grid;    
     justify-items: center !important;    
     justify-content: center !important;  
+    transform: translate(0%) !important;
     }
-
 }
-
-
-
-
-
 
 
 
@@ -361,7 +423,6 @@ a:hover {
     [class*="custom-menu"] {  
     scale: 90%;          
     }
-
 
 
 
@@ -410,6 +471,7 @@ a:hover {
     justify-items: center !important;
     justify-content: center !important; 
     margin: auto !important;    
+    transform: translate(2.5%) !important;
     }
 
 
@@ -417,5 +479,9 @@ a:hover {
     text-align: center;
     }
 
+
+    #form-order-two-column label {
+    width: 100%;
+    }
 
 }
