@@ -181,10 +181,16 @@ a:hover {
 }
 
 
+
+/* ----- For all Contact 7 forms ----- */
 .wpcf7-spinner {
     display: none !important;   
 }
 
+
+.wpcf7-text:focus, .wpcf7-textarea:focus {
+    outline:none;
+}
 
 .wpcf7 input[type=submit] {
     color:#ffffff;
