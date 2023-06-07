@@ -65,8 +65,7 @@ a:hover {
 
 .header-logo-container {
     display: flex;
-    flex-direction: row;
-    align-items:flex-start;    
+    flex-direction: row;       
     margin-left: 20px;
     max-width: 200px;
     align-items: center;   
@@ -141,10 +140,15 @@ a:hover {
 /* ------------------------------------------------------- */
 /* -----CONTACT PAGE---- */
 /* ------------------------------------------------------- */
+#planty-contact {
+    display: grid;
+    justify-items: center;
+}
+
 
 #planty-contact p {
     font-size: 20px; 
-    font-weight: 400px;    
+    font-weight: 400;    
     padding-top: 15px;
     padding-bottom: 15px;    
 }
@@ -177,37 +181,45 @@ a:hover {
 }
 
 
-/* -----Note: For all forms---- */
 .wpcf7-spinner {
     display: none !important;   
 }
 
-/* -----Note: For all forms---- */
+
 .wpcf7 input[type=submit] {
     color:#ffffff;
     font-size: 15px !important; 
-    font-weight: 400px !important;    
+    font-weight: 400 !important;    
     border-radius: 7px;
     background-color: #E0B9B4;
     border: 0px solid;
     width: 200px !important;
     height: 55px !important;     
-    display: flex;   
-    
+    display: grid;
+      
 }
 
-/* -----Note: For all forms---- */
+
 .wpcf7-form-control.has-spinner.wpcf7-submit:hover {
     background-color: #C02E44;
 }
 
-
-.wpcf7-form.invalid {
- 
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7-response-output {
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    color:#C02E44;
+    background-color: #E0B9B4;
+    text-align: center;    
+    margin: auto;
+    max-width: 90%;
 }
 
-.wpcf7-response-output {
-  
+.wpcf7-not-valid-tip {
+    background-color: #E0B9B4;
+    color: #C02E44;
+    border-radius: 5px;
+    text-align: center;
 }
 
 
@@ -217,28 +229,24 @@ a:hover {
 /* -----ORDER / COMMANDE PAGE---- */
 /* ------------------------------------------------------- */
 
-/* -----Items / Flavor section---- */
 /* ----- Number Input & +/- button ----- */
-.quantity {
+.quantity1, .quantity2, .quantity3, .quantity4 {
     position: relative;
     max-height: 70px;
  
 }
 
 input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button
-
-{
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-input[type=number]
-{
+input[type=number] {
   -moz-appearance: textfield;
 }
 
-.quantity input {
+.quantity1 input, .quantity2 input, .quantity3 input, .quantity4 input {
     width: 60%;
     height: 70px; 
     float: left;
@@ -254,11 +262,11 @@ input[type=number]
     border: 1px solid #ffffff;
     }
 
-.quantity input:focus {
+.quantity1 input:focus, .quantity2 input:focus, .quantity3 input:focus, .quantity4 input:focus {
     outline: 0;
 }
 
-.quantity-nav {
+.quantity1 .quantity-nav, .quantity2 .quantity-nav, .quantity3 .quantity-nav, .quantity4 .quantity-nav {
     float: left;
     position: relative;
     height: 70px; 
@@ -267,7 +275,7 @@ input[type=number]
 }
 
 
-.quantity-button {
+.quantity1 .quantity-button, .quantity2 .quantity-button, .quantity3 .quantity-button, .quantity4 .quantity-button {
     box-sizing: content-box;
     position: relative;
     cursor: pointer;  
@@ -283,7 +291,7 @@ input[type=number]
     user-select: none;
 }
 
-.quantity-button.quantity-up {
+.quantity1 .quantity-button.quantity-up, .quantity2 .quantity-button.quantity-up, .quantity3 .quantity-button.quantity-up, .quantity4 .quantity-button.quantity-up {
     position: absolute;
     height: 50%; 
     top: 0;   
@@ -291,7 +299,7 @@ input[type=number]
     box-shadow: 0px 5px #ffffff;
 }
 
-.quantity-button.quantity-down {
+.quantity1 .quantity-button.quantity-down, .quantity2 .quantity-button.quantity-down, .quantity3 .quantity-button.quantity-down, .quantity4 .quantity-button.quantity-down {
     position: absolute;
     bottom: -1px;
     height: 50%;
@@ -302,13 +310,13 @@ input[type=number]
 
 
 
-/* ------------------------------------------------------- */
+
 /* -----Order / Commande form---- */
-/* ------------------------------------------------------- */
 .form-order-title {
     font-size: 30px !important;
     font-weight: 700 !important;
     padding-bottom: 50px;
+    text-align: center;
 }
 
 
@@ -317,12 +325,13 @@ input[type=number]
     color: #ffffff;
     font-size: 20px !important;
     font-weight: 400 !important;      
+    margin: auto;
 }
 
 
 #form-order-two-column p {
     font-size: 20px; 
-    font-weight: 400px;    
+    font-weight: 400;    
     padding-top: 5px;    
     margin-bottom: 50px;
 }
@@ -338,7 +347,7 @@ input[type=number]
 
 
 #form-order-two-column #form-order-left {
-    width: 49.5%;
+    width: 50%;
     float: left !important;   
     display: grid;    
     justify-content: flex-start;
@@ -397,6 +406,10 @@ input[type=number]
     justify-content: center !important;  
     transform: translate(0%) !important;
     }
+
+    #form-order-two-column label {
+    width: 100%;
+}
 }
 
 
@@ -413,8 +426,7 @@ input[type=number]
     max-width: 75%;    
     }
 
-    [class*="header-logo-container"] {
-    size: 100%;
+    [class*="header-logo-container"] {    
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: auto;
@@ -423,7 +435,7 @@ input[type=number]
 
 
     [class*="custom-menu"] {  
-    scale: 90%;          
+    scale: 90%;     
     }
 
 
