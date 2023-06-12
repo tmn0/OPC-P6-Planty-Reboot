@@ -21,7 +21,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 ?>
 
 <div class="custom_footer_link_container">
-	<a href="http://opcr-p6.local" target="_blank">Mentions légales
+	<a href="#">Mentions légales
 	</a>
 </div>
 

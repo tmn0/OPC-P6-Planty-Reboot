@@ -80,8 +80,7 @@ a:hover {
 }
 
 .custom-menu {
-    width: 100%;  
-    font-weight: 700;   
+    width: 100%;        
 }
 
 .custom-menu .menu {
@@ -92,21 +91,46 @@ a:hover {
 }
 
 .custom-menu .menu .menu-item {   
-    padding: 25px;         
+    height: 80px; 
 }   
 
-.menu-item-410 {
-    background-color: #DC9F96;                
+#menu-item-410 {
+    background-color: #DC9F96;         
+    width: 236px;    
+    display: flex;  
+    order: 3;  
 }
 
+#menu-item-410 a {
+    color:#ffffff;     
+    display: flex;
+    align-items: center;      
+    margin: auto;
+    font-weight: 700;   
+}
+
+#menu-item-411 {
+    font-weight: 700; 
+    display: flex;
+    padding-left: 25px;
+    padding-right: 25px;
+    order: 1;
+}
+
+#menu-item-411 a {
+    display: flex;
+    align-items: center;      
+    margin: auto;
+}
 
 #menu-item-412 {
     display: flex;
+    order: 2;
 }
 
 .menu-admin-class {
-    padding-left: 1.5%;
-    padding-right: 1.5%;      
+    padding-left: 50px;
+    padding-right: 50px;        
 }
 
 .menu-admin-class a {  
@@ -115,14 +139,15 @@ a:hover {
 }
 
 .custom-menu .menu .menu-item:hover {
-    background-color: var(--custom-header-hover);
+    background-color: var(--custom-header-hover) !important;
     color: var(--text-white);
 }
 
 #menu-item-412:hover {
-    background-color: var(--custom-header-hover);
+    background-color: var(--custom-header-hover) !important;
     color: var(--text-white);
 }
+
 
 
 /* ------------------------------------------------------- */
@@ -179,7 +204,6 @@ a:hover {
     display: flex;
     justify-content: center;    
 }
-
 
 
 /* ----- For all Contact 7 forms ----- */
@@ -390,6 +414,27 @@ input[type=number] {
 /* ------------------------------------------------------- */
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    
+    /* -----Header---- */
+    #form-order-two-column label {
+    width: 100%;
+    }
+
+    #menu-item-410, #menu-item-411 {         
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;             
+    }
+  
+    .menu-admin-class {
+    padding-left: 20px;
+    padding-right: 20px;        
+    }   
+    
+    
+    
+    
     /* -----Forms---- */
     [id*="form-order-two-column"] {
     width: 95% !important;       
@@ -412,9 +457,8 @@ input[type=number] {
     transform: translate(0%) !important;
     }
 
-    #form-order-two-column label {
-    width: 100%;
-}
+    
+
 }
 
 
@@ -428,7 +472,10 @@ input[type=number] {
     }
 
     [class*="header-planty-menu-container"] {
-    max-width: 75%;    
+    max-width: 95%;   
+    display: grid;
+    justify-content: center;  
+    transform: translate(-5%);
     }
 
     [class*="header-logo-container"] {    
@@ -440,8 +487,30 @@ input[type=number] {
 
 
     [class*="custom-menu"] {  
-    scale: 90%;     
+    transform: scale(0.9);     
     }
+
+    .custom-menu .menu {    
+    justify-content: center;
+    }
+
+    #menu-item-411 {
+    padding-left: 10px ;
+    padding-right: 10px ;
+    }
+
+    #menu-item-410 {
+    width: fit-content;
+    padding-left: 10px ;
+    padding-right: 10px ;
+    }
+
+    .menu-admin-class {
+    padding-left: 10px;
+    padding-right: 10px;        
+    }
+
+
 
 
 

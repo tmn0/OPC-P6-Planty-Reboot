@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $viewport_content = apply_filters( 'hello_elementor_viewport_content', 'width=device-width, initial-scale=1' );
-$enable_skip_link = apply_filters( 'hello_elementor_enable_skip_link', true );
+$enable_skip_link = apply_filters( 'hello_elementor_enable_skip_link', false );
 $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 ?>
 <!doctype html>
@@ -40,7 +40,7 @@ $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 <header>
 	<div class="header-main-container">
 		<div class="header-logo-container"> 
-    		<a href="http://opcr-p6.local/"> <!-- Mettre lien homepage -->
+    		<a href="<?php echo site_url() ?>">
     		<img src="\wp-content\uploads\2023\05\Logo-768x71.png" alt="logo_Planty">
     		</a>
     </div>
@@ -55,5 +55,3 @@ $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 	</div>
 	</div>	
 </header>
-
-
