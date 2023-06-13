@@ -41,7 +41,7 @@ $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 	<div class="header-main-container">
 		<div class="header-logo-container"> 
     		<a href="<?php echo site_url() ?>">
-    		<img src="\wp-content\uploads\2023\05\Logo-768x71.png" alt="logo_Planty">
+    		<img src="<?php echo site_url() ?>/wp-content/uploads/2023/05/Logo-768x71.png" alt="logo_Planty"> 
     		</a>
     </div>
 
